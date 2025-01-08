@@ -37,10 +37,10 @@ export const QuestionChoice = ({ onSelect, selectedValue }: QuestionChoiceProps)
                 className="sr-only"
               />
               <motion.div
-                className={`w-16 h-16 rounded-full border flex items-center justify-center
+                className={`w-16 h-16 rounded-[999px] border flex items-center justify-center
                   ${selectedValue === choice.value
                     ? `bg-[#7FFFD4] border-transparent shadow-lg`
-                    : `border-[#7FFFD4] border-[1px] hover:border-[#7FFFD4] hover:shadow-md`
+                    : `border-[#9b87f5] border-[1px] hover:border-[#7FFFD4] hover:shadow-md`
                   }`}
                 animate={selectedValue === choice.value ? 
                   { scale: [1, 1.2, 1], rotate: [0, 360] } : 

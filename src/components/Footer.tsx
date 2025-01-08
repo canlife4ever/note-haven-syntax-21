@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 
 export const Footer = () => {
   return (
-    <footer className="bg-white py-12 border-t">
+    <footer className="bg-white py-12 border-gradient">
       <div className="container mx-auto px-4 mb-8">
         <div className="text-center max-w-xl mx-auto">
           <h3 className="text-2xl font-bold mb-6">BE THE FIRST TO KNOW ABOUT NEW PRODUCTS AND SALES</h3>
@@ -30,7 +30,7 @@ export const Footer = () => {
       </div>
 
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center border-t pt-6">
+        <div className="flex justify-between items-center border-gradient pt-6">
           <div className="flex gap-4">
             <a href="#" className="text-gray-600 hover:text-blue-600">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

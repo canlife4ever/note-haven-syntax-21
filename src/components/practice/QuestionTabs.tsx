@@ -18,14 +18,27 @@ export const QuestionTabs = () => {
       </TabsContent>
       
       <TabsContent value="solution" className="mt-4">
-        <div className="bg-white p-6 rounded-lg shadow-sm border min-h-[200px]">
-          Solution content here...
+        <div className="bg-white p-6 rounded-lg shadow-sm border min-h-[400px]">
+          <p className="text-gray-700">
+            To find the probability of rolling a 15 on a fair 25-sided die:
+            <br /><br />
+            1. Each number has an equal chance of being rolled
+            <br />
+            2. There is only one way to roll a 15
+            <br />
+            3. There are 25 possible outcomes
+            <br /><br />
+            Therefore, the probability is 1/25 or 0.04 or 4%
+          </p>
         </div>
       </TabsContent>
       
       <TabsContent value="quote" className="mt-4">
-        <div className="bg-white p-6 rounded-lg shadow-sm border min-h-[200px]">
-          Quote content here...
+        <div className="bg-white p-6 rounded-lg shadow-sm border min-h-[400px]">
+          <blockquote className="text-gray-700 italic">
+            "Mathematics is not about numbers, equations, computations, or algorithms: 
+            it is about understanding." - William Paul Thurston
+          </blockquote>
         </div>
       </TabsContent>
     </Tabs>

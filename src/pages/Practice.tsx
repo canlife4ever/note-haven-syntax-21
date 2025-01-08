@@ -24,6 +24,7 @@ const Practice = () => {
   const [selectedMode, setSelectedMode] = useState("Timer Mode");
   const [totalQuestions, setTotalQuestions] = useState(50);
   const [currentQuestion, setCurrentQuestion] = useState(20);
+  const [activeTab, setActiveTab] = useState("problem");
 
   const handleAnswerSelect = (answerId: string) => {
     setSelectedAnswer(answerId);
@@ -70,13 +71,15 @@ const Practice = () => {
           
           <QuestionTabs />
 
-          <div className="mt-8">
-            <MultipleChoice
-              onSelect={(value) => handleAnswerSelect(value.toString())}
-              selectedValue={selectedAnswer}
-              isCorrect={isCorrect}
-            />
-          </div>
+          {activeTab === "problem" && (
+            <div className="mt-8">
+              <MultipleChoice
+                onSelect={(value) => handleAnswerSelect(value.toString())}
+                selectedValue={selectedAnswer}
+                isCorrect={isCorrect}
+              />
+            </div>
+          )}
 
           <QuestionNavigation
             onPrevious={() => console.log('Previous')}
