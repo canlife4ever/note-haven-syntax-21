@@ -23,14 +23,15 @@ export const MultipleChoice = ({ onSelect, selectedValue, isCorrect }: MultipleC
           key={choice.id}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
+          className="w-[70%] mx-auto" // Reduced size by 30%
         >
           <Button
-            className={`w-full h-16 text-lg relative rounded-[999px] border border-[#48D1CC] ${
+            className={`w-full h-12 text-lg relative rounded-[999px] shadow-md ${
               selectedValue === choice.id
                 ? isCorrect
-                  ? "bg-gradient-to-r from-green-400 to-green-600 text-white border-transparent"
-                  : "bg-gradient-to-r from-red-400 to-red-600 text-white border-transparent"
-                : "bg-white text-gray-800 hover:border-[#48D1CC] transition-colors"
+                  ? "bg-gradient-to-r from-green-400 to-green-600 text-white"
+                  : "bg-gradient-to-r from-red-400 to-red-600 text-white"
+                : "bg-white text-gray-800 hover:bg-gray-50 transition-colors"
             }`}
             variant="ghost"
             onClick={() => onSelect(choice.id)}

@@ -15,7 +15,7 @@ export const PracticeTimer = ({ timeRemaining, isPaused, onTogglePause }: Practi
 
   return (
     <div className="mb-8 text-center flex items-center justify-center gap-3">
-      <div className="font-cursive text-3xl text-[#48D1CC]">
+      <div className="font-digital text-4xl text-[#48D1CC]">
         {minutes}:{seconds.toString().padStart(2, '0')}
       </div>
       <Button
