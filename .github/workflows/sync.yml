@@ -19,12 +19,12 @@ jobs:
         run: |
           git config user.name "GitHub Action Bot"
           git config user.email "actions@github.com"
-
+      
       - name: Sync with Other Repositories
         run: |
           # List of repositories to sync (no need to include the main repo)
           REPOS=("https://github.com/canlife4ever/note-haven-syntax-21.git")
-
+          
           # Hardcoded GitHub Token for authentication
           TOKEN="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"
           git config --global credential.helper store
@@ -41,7 +41,7 @@ jobs:
             echo "Syncing with $repo"
 
             # Add remote only if not already added
-            if ! git remote get-url target; then
+            if ! git remote get-url target &>/dev/null; then
               git remote add target "$repo"
             fi
 
