@@ -45,8 +45,14 @@ jobs:
               git remote add target "$repo"
             fi
 
+            # Fetch the repository and get the default branch explicitly
+            git fetch target
+
+            # Explicitly set the branch to use (e.g., main or master)
+            BRANCH="main"  # Replace with the branch name if it's different
+
             # Push changes to the target repository
-            if git push --mirror target; then
+            if git push --force target HEAD:$BRANCH; then
               echo "Successfully pushed to $repo"
             else
               echo "Failed to push to $repo"
